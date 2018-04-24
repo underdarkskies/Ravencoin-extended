@@ -79,8 +79,6 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
 
     ui->openRavenConfButton->setToolTip(ui->openRavenConfButton->toolTip().arg(tr(PACKAGE_NAME)));
 
-    ui->openBitcoinConfButton->setToolTip(ui->openBitcoinConfButton->toolTip().arg(tr(PACKAGE_NAME)));
-
     ui->lang->setToolTip(ui->lang->toolTip().arg(tr(PACKAGE_NAME)));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
     for (const QString &langStr : translations.entryList())

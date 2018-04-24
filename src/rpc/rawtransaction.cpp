@@ -43,7 +43,7 @@ void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& entry, 
     // available to code in raven-common, so we query them here and push the
     // data into the returned UniValue.
     TxToUniv(tx, uint256(), entry, true, RPCSerializationFlags());
-    
+
     if (expanded) {
         uint256 txid = tx.GetHash();
         if (!(tx.IsCoinBase())) {
@@ -60,9 +60,9 @@ void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& entry, 
                     in.pushKV("value", ValueFromAmount(spentInfo.satoshis));
                     in.pushKV("valueSat", spentInfo.satoshis);
                     if (spentInfo.addressType == 1) {
-                        in.pushKV("address", CBitcoinAddress(CKeyID(spentInfo.addressHash)).ToString());
+                        in.pushKV("address", CRavenAddress(CKeyID(spentInfo.addressHash)).ToString());
                     } else if (spentInfo.addressType == 2) {
-                        in.pushKV("address", CBitcoinAddress(CScriptID(spentInfo.addressHash)).ToString());
+                        in.pushKV("address", CRavenAddress(CScriptID(spentInfo.addressHash)).ToString());
                     }
                 }
                 newVin.push_back(in);

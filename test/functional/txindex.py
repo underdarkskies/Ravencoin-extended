@@ -8,13 +8,13 @@
 #
 
 import time
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import RavenTestFramework
 from test_framework.util import *
 from test_framework.script import *
 from test_framework.mininode import *
 import binascii
 
-class TxIndexTest(BitcoinTestFramework):
+class TxIndexTest(RavenTestFramework):
 
     def __init__(self):
         super().__init__()

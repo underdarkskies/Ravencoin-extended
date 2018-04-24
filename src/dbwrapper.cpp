@@ -82,7 +82,7 @@ static leveldb::Options GetOptions(size_t nCacheSize, bool compression, int maxO
     options.filter_policy = leveldb::NewBloomFilterPolicy(10);
     options.compression = compression ? leveldb::kSnappyCompression : leveldb::kNoCompression;
     options.max_open_files = maxOpenFiles;
-    options.info_log = new CBitcoinLevelDBLogger();
+    options.info_log = new CRavenLevelDBLogger();
     options.max_file_size = maxFileSize;
     if (leveldb::kMajorVersion > 1 || (leveldb::kMajorVersion == 1 && leveldb::kMinorVersion >= 16)) {
         // LevelDB versions before 1.16 consider short writes to be corruption. Only trigger error

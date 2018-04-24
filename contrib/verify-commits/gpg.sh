@@ -1,4 +1,4 @@
-#!/bin/sh
+RAVEN#!/bin/sh
 # Copyright (c) 2014-2016 The Bitcoin Core developers
 # Copyright (c) 2017 The Raven Core developers
 # Distributed under the MIT software license, see the accompanying
@@ -53,7 +53,7 @@ for LINE in $(echo "$GPG_RES"); do
 		GOODREVSIG="[GNUPG:] GOODSIG ${LINE#* * *}"
 		;;
 	"[GNUPG:] EXPKEYSIG "*)
-		[ "$BITCOIN_VERIFY_COMMITS_ALLOW_REVSIG" != 1 ] && exit 1
+		[ "$RAVEN_VERIFY_COMMITS_ALLOW_REVSIG" != 1 ] && exit 1
 		REVSIG=true
 		GOODREVSIG="[GNUPG:] GOODSIG ${LINE#* * *}"
 		;;

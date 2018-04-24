@@ -9,11 +9,11 @@
 
 import time
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import RavenTestFramework
 from test_framework.util import *
 
 
-class TimestampIndexTest(BitcoinTestFramework):
+class TimestampIndexTest(RavenTestFramework):
 
     def __init__(self):
         super().__init__()

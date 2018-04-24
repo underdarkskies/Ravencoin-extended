@@ -5,7 +5,7 @@ etc.
 
 There are currently two sets of tests in this directory:
 
-- [functional](/test/functional) which test the functionality of 
+- [functional](/test/functional) which test the functionality of
 ravend and raven-qt by interacting with them through the RPC and P2P
 interfaces.
 - [util](test/util) which tests the raven utilities, currently only
@@ -175,7 +175,7 @@ gdb /home/example/ravend <pid>
 
 Note: gdb attach step may require `sudo`
 
-If further introspection of the bitcoind instances themselves becomes
+If further introspection of the Ravend instances themselves becomes
 necessary, this can be accomplished by first setting a pdb breakpoint
 at an appropriate location, running the test to that point, then using
 `gdb` to attach to the process and debug.
@@ -189,19 +189,19 @@ For instance, to attach to `self.node[1]` during a run:
 use the directory path to get the pid from the pid file:
 
 ```bash
-cat /tmp/user/1000/testo9vsdjo3/node1/regtest/bitcoind.pid
-gdb /home/example/bitcoind <pid>
+cat /tmp/user/1000/testo9vsdjo3/node1/regtest/Ravend.pid
+gdb /home/example/Ravend <pid>
 ```
 
 Note: gdb attach step may require `sudo`
 
 ### Util tests
 
-Util tests can be run locally by running `test/util/raven-util-test.py`. 
+Util tests can be run locally by running `test/util/raven-util-test.py`.
 Use the `-v` option for verbose output.
 
 # Writing functional tests
 
 You are encouraged to write functional tests for new or existing features.
-Further information about the functional test framework and individual 
+Further information about the functional test framework and individual
 tests is found in [test/functional](/test/functional).

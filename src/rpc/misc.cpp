@@ -58,7 +58,7 @@ UniValue getinfo(const JSONRPCRequest& request)
             "  \"version\": xxxxx,           (numeric) the server version\n"
             "  \"protocolversion\": xxxxx,   (numeric) the protocol version\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total bitcoin balance of the wallet\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total raven balance of the wallet\n"
             "  \"blocks\": xxxxxx,           (numeric) the current number of blocks processed in the server\n"
             "  \"timeoffset\": xxxxx,        (numeric) the time offset\n"
             "  \"connections\": xxxxx,       (numeric) the number of connections\n"
@@ -654,9 +654,9 @@ UniValue echo(const JSONRPCRequest& request)
 bool getAddressFromIndex(const int &type, const uint160 &hash, std::string &address)
 {
     if (type == 2) {
-        address = CBitcoinAddress(CScriptID(hash)).ToString();
+        address = CRavenAddress(CScriptID(hash)).ToString();
     } else if (type == 1) {
-        address = CBitcoinAddress(CKeyID(hash)).ToString();
+        address = CRavenAddress(CKeyID(hash)).ToString();
     } else {
         return false;
     }
@@ -666,7 +666,7 @@ bool getAddressFromIndex(const int &type, const uint160 &hash, std::string &addr
 bool getAddressesFromParams(const UniValue& params, std::vector<std::pair<uint160, int> > &addresses)
 {
     if (params[0].isStr()) {
-        CBitcoinAddress address(params[0].get_str());
+        CRavenAddress address(params[0].get_str());
         uint160 hashBytes;
         int type = 0;
         if (!address.GetIndexKey(hashBytes, type)) {
@@ -684,7 +684,7 @@ bool getAddressesFromParams(const UniValue& params, std::vector<std::pair<uint16
 
         for (std::vector<UniValue>::iterator it = values.begin(); it != values.end(); ++it) {
 
-            CBitcoinAddress address(it->get_str());
+            CRavenAddress address(it->get_str());
             uint160 hashBytes;
             int type = 0;
             if (!address.GetIndexKey(hashBytes, type)) {

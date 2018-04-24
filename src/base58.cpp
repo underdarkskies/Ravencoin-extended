@@ -294,7 +294,7 @@ CTxDestination CRavenAddress::Get() const
         return CNoDestination();
 }
 
-bool CBitcoinAddress::GetIndexKey(uint160& hashBytes, int& type) const
+bool CRavenAddress::GetIndexKey(uint160& hashBytes, int& type) const
 {
     if (!IsValid()) {
         return false;
@@ -311,7 +311,7 @@ bool CBitcoinAddress::GetIndexKey(uint160& hashBytes, int& type) const
     return false;
 }
 
-bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
+bool CRavenAddress::GetKeyID(CKeyID& keyID) const
 {
     if (!IsValid() || vchVersion != Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS))
         return false;
@@ -321,12 +321,12 @@ bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
     return true;
 }
 
-bool CBitcoinAddress::IsScript() const
+bool CRavenAddress::IsScript() const
 {
     return IsValid() && vchVersion == Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS);
 }
 
-void CBitcoinSecret::SetKey(const CKey& vchSecret)
+void CRavenSecret::SetKey(const CKey& vchSecret)
 {
     assert(vchSecret.IsValid());
     SetData(Params().Base58Prefix(CChainParams::SECRET_KEY), vchSecret.begin(), vchSecret.size());

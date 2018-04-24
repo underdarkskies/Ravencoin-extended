@@ -1189,14 +1189,14 @@ static const CRPCCommand commands[] =
     { "util",               "signmessagewithprivkey", &signmessagewithprivkey, {"privkey","message"} },
 
     /* Address index */
-    { "addressindex",       "getaddressmempool",      &getaddressmempool,      true, {} },
-    { "addressindex",       "getaddressutxos",        &getaddressutxos,        false, {} },
-    { "addressindex",       "getaddressdeltas",       &getaddressdeltas,       false, {} },
-    { "addressindex",       "getaddresstxids",        &getaddresstxids,        false, {} },
-    { "addressindex",       "getaddressbalance",      &getaddressbalance,      false, {} },
+    { "addressindex",       "getaddressmempool",      &getaddressmempool,      {} },
+    { "addressindex",       "getaddressutxos",        &getaddressutxos,        {} },
+    { "addressindex",       "getaddressdeltas",       &getaddressdeltas,       {} },
+    { "addressindex",       "getaddresstxids",        &getaddresstxids,        {} },
+    { "addressindex",       "getaddressbalance",      &getaddressbalance,      {} },
 
     /* Blockchain */
-    { "blockchain",         "getspentinfo",           &getspentinfo,           false, {} },
+    { "blockchain",         "getspentinfo",           &getspentinfo,           {} },
 
     /* Not shown in help */
     { "hidden",             "setmocktime",            &setmocktime,            {"timestamp"}},

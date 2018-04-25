@@ -7,6 +7,7 @@ Ravencore- an extended RPC version of Ravencoin
 Major Changes Include:
 ----------------
 Removing BIP173(Bech32) support <br />
+rebasing ravencoin to the correct commit of bitcoin <br />
 adding address, spent and timestamp indexes and RPC calls <br />
 
 Compiling Notes (linux):

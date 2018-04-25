@@ -1,6 +1,76 @@
-Raven Core integration/staging tree
+Ravencore- an extended RPC version of Ravencoin  
 =====================================
 
+Major Changes Include:
+----------------
+Removing BIP173(Bech32) support
+adding address, spent and timestamp indexes and RPC calls
+
+Compiling Notes (linux):
+----------------
+Prerequisites:
+sudo apt-get -y install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
+sudo apt-get install libboost-all-dev
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+sudo apt-get install libminiupnpc-dev
+sudo apt-get install libzmq3-dev
+
+Compiling:
+
+sudo ./autogen.sh
+./configure --enable-cxx --disable-tests --disable-shared --with-pic --prefix=$BDB_PREFIX CXXFLAGS="-fPIC" CPPFLAGS="-fPIC"
+make
+
+Helpful Commands
+----------------
+(start ravend)
+ravend -daemon
+
+(stop ravend)
+raven-cli stop
+
+Sample raven.conf
+----------------
+# START of Sample raven.conf
+# server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands
+server=1
+
+# Set rpcuser and rpcpassword to your own values for security 
+rpcuser=a-unique-username
+rpcpassword=a-unique-password
+
+# allow connections from localhost
+rpcallowip=127.0.0.1
+whitelist=127.0.0.1
+
+# Listen for RPC connections on this TCP port:
+rpcport=8766
+
+# Miscellaneous options
+
+txindex=1
+addressindex=1
+spentindex=1
+timestampindex=1
+
+mempoolexpiry=72 # Default 336
+rpcworkqueue=1100
+maxmempool=2000
+dbcache=1000
+maxtxfee=1.0
+uacomment=bitcore-sl
+zmqpubrawtx=tcp://127.0.0.1:28332
+zmqpubhashblock=tcp://127.0.0.1:28332
+dbmaxfilesize=64
+# END of Sample raven.conf
+
+
+
+Raven Core integration/staging tree
+=====================================
 https://ravencoin.org
 
 What is Raven?

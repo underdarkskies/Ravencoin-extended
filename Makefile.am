@@ -10,7 +10,7 @@ SUBDIRS += doc/man
 endif
 .PHONY: deploy FORCE
 
-GZIP_ENV="-9n"
+override GZIP_ENV = "-9n"
 export PYTHONPATH
 
 if BUILD_RAVEN_LIBS
@@ -86,7 +86,7 @@ $(OSX_APP)/Contents/PkgInfo:
 
 $(OSX_APP)/Contents/Resources/empty.lproj:
 	$(MKDIR_P) $(@D)
-	@touch $@ 
+	@touch $@
 
 $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
 	$(MKDIR_P) $(@D)

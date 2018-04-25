@@ -1,3 +1,6 @@
+This has been a comphrensive project for me. If you appreciate the work done <br />
+please consider donating to RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q <br />
+
 Ravencore- an extended RPC version of Ravencoin  
 =====================================
 

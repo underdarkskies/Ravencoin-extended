@@ -34,22 +34,22 @@ raven-cli stop
 
 Sample raven.conf
 ----------------
-START of Sample raven.conf <br />
-server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands <br />
+
+(server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands) <br />
 server=1 <br />
 
-Set rpcuser and rpcpassword to your own values for security <br />
+(Set rpcuser and rpcpassword to your own values for security) <br />
 rpcuser=a-unique-username <br />
 rpcpassword=a-unique-password <br />
 
-allow connections from localhost <br />
+(allow connections from localhost) <br />
 rpcallowip=127.0.0.1 <br />
 whitelist=127.0.0.1 <br />
 
-Listen for RPC connections on this TCP port: <br />
+(Listen for RPC connections on this TCP port:) <br />
 rpcport=8766 <br />
 
-Miscellaneous options <br />
+(Miscellaneous options) <br />
 
 txindex=1 <br />
 addressindex=1 <br />

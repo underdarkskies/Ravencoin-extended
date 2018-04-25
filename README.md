@@ -4,7 +4,7 @@ Ravencore- an extended RPC version of Ravencoin
 Major Changes Include:
 ----------------
 Removing BIP173(Bech32) support <br />
-adding address, spent and timestamp indexes and RPC calls
+adding address, spent and timestamp indexes and RPC calls <br />
 
 Compiling Notes (linux):
 ----------------
@@ -20,17 +20,17 @@ sudo apt-get install libzmq3-dev <br />
 
 Compiling:
 
-sudo ./autogen.sh
-./configure --enable-cxx --disable-tests --disable-shared --with-pic --prefix=$BDB_PREFIX CXXFLAGS="-fPIC" CPPFLAGS="-fPIC"
-make
+sudo ./autogen.sh <br />
+./configure --enable-cxx --disable-tests --enable-reduce-exports --disable-bench --disable-shared --with-pic --prefix=$BDB_PREFIX CXXFLAGS="-fPIC" CPPFLAGS="-fPIC" <br />
+make <br />
 
 Helpful Commands
 ----------------
-(start ravend)
-ravend -daemon
+(start ravend) <br />
+ravend -daemon <br />
 
-(stop ravend)
-raven-cli stop
+(stop ravend) <br />
+raven-cli stop <br />
 
 Sample raven.conf
 ----------------

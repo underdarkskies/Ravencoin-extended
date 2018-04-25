@@ -3,20 +3,20 @@ Ravencore- an extended RPC version of Ravencoin
 
 Major Changes Include:
 ----------------
-Removing BIP173(Bech32) support
+Removing BIP173(Bech32) support <br />
 adding address, spent and timestamp indexes and RPC calls
 
 Compiling Notes (linux):
 ----------------
-Prerequisites:
-sudo apt-get -y install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
-sudo apt-get install libboost-all-dev
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:bitcoin/bitcoin
-sudo apt-get update
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
-sudo apt-get install libminiupnpc-dev
-sudo apt-get install libzmq3-dev
+Prerequisites: <br />
+sudo apt-get -y install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 <br />
+sudo apt-get install libboost-all-dev <br />
+sudo apt-get install software-properties-common <br />
+sudo add-apt-repository ppa:bitcoin/bitcoin <br />
+sudo apt-get update <br />
+sudo apt-get install libdb4.8-dev libdb4.8++-dev <br />
+sudo apt-get install libminiupnpc-dev <br />
+sudo apt-get install libzmq3-dev <br />
 
 Compiling:
 
@@ -34,39 +34,37 @@ raven-cli stop
 
 Sample raven.conf
 ----------------
-# START of Sample raven.conf
-# server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands
-server=1
+START of Sample raven.conf <br />
+server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands <br />
+server=1 <br />
 
-# Set rpcuser and rpcpassword to your own values for security 
-rpcuser=a-unique-username
-rpcpassword=a-unique-password
+Set rpcuser and rpcpassword to your own values for security <br />
+rpcuser=a-unique-username <br />
+rpcpassword=a-unique-password <br />
 
-# allow connections from localhost
-rpcallowip=127.0.0.1
-whitelist=127.0.0.1
+allow connections from localhost <br />
+rpcallowip=127.0.0.1 <br />
+whitelist=127.0.0.1 <br />
 
-# Listen for RPC connections on this TCP port:
-rpcport=8766
+Listen for RPC connections on this TCP port: <br />
+rpcport=8766 <br />
 
-# Miscellaneous options
+Miscellaneous options <br />
 
-txindex=1
-addressindex=1
-spentindex=1
-timestampindex=1
+txindex=1 <br />
+addressindex=1 <br />
+spentindex=1 <br />
+timestampindex=1 <br />
 
-mempoolexpiry=72 # Default 336
-rpcworkqueue=1100
-maxmempool=2000
-dbcache=1000
-maxtxfee=1.0
-uacomment=bitcore-sl
-zmqpubrawtx=tcp://127.0.0.1:28332
-zmqpubhashblock=tcp://127.0.0.1:28332
-dbmaxfilesize=64
-# END of Sample raven.conf
-
+mempoolexpiry=72 # Default 336 <br />
+rpcworkqueue=1100 <br />
+maxmempool=2000 <br />
+dbcache=1000 <br />
+maxtxfee=1.0 <br />
+uacomment=bitcore-sl <br />
+zmqpubrawtx=tcp://127.0.0.1:28332 <br />
+zmqpubhashblock=tcp://127.0.0.1:28332 <br />
+dbmaxfilesize=64 <br />
 
 
 Raven Core integration/staging tree

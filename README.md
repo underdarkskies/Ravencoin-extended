@@ -6,7 +6,7 @@ Ravencore- an extended RPC version of Ravencoin
 
 Major Changes Include:
 ----------------
-Removing BIP173(Bech32) support <br />
+Removing Full BIP173(Bech32) support <br />
 Rebasing Ravencoin to the correct commit of bitcoin <br />
 Adding address, spent and timestamp indexes and RPC calls <br />
 
@@ -42,26 +42,26 @@ $ravend -daemon
 ```
 (stop ravend) <br />
 ```
-$raven-cli stop <br />
+$raven-cli stop
 ```
 Sample raven.conf
 ----------------
 ```
 #server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands
-server=1 <br />
+server=1
 
 #Set rpcuser and rpcpassword to your own values for security
 rpcuser=a-unique-username
 rpcpassword=a-unique-password
 
-#(allow connections from localhost
+#allow connections from localhost
 rpcallowip=127.0.0.1
 whitelist=127.0.0.1
 
-#(Listen for RPC connections on this TCP port:
-rpcport=8766 <br />
+#Listen for RPC connections on this TCP port:
+rpcport=8766
 
-#(Miscellaneous options)
+#Miscellaneous options
 
 txindex=1
 addressindex=1

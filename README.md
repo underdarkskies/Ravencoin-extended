@@ -1,5 +1,5 @@
 This has been a comphrensive project for me. If you appreciate the work done <br />
-please consider donating to RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q <br />
+please consider donating(RVN) to: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q <br />
 
 Ravencore- an extended RPC version of Ravencoin  
 =====================================
@@ -7,69 +7,77 @@ Ravencore- an extended RPC version of Ravencoin
 Major Changes Include:
 ----------------
 Removing BIP173(Bech32) support <br />
-rebasing ravencoin to the correct commit of bitcoin <br />
-adding address, spent and timestamp indexes and RPC calls <br />
+Rebasing Ravencoin to the correct commit of bitcoin <br />
+Adding address, spent and timestamp indexes and RPC calls <br />
 
 Compiling Notes (linux):
 ----------------
+
 Prerequisites: <br />
-sudo apt-get -y install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 <br />
-sudo apt-get install libboost-all-dev <br />
-sudo apt-get install software-properties-common <br />
-sudo add-apt-repository ppa:bitcoin/bitcoin <br />
-sudo apt-get update <br />
-sudo apt-get install libdb4.8-dev libdb4.8++-dev <br />
-sudo apt-get install libminiupnpc-dev <br />
-sudo apt-get install libzmq3-dev <br />
+
+```
+$sudo apt-get -y install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
+$sudo apt-get install libboost-all-dev
+$sudo apt-get install software-properties-common
+$sudo add-apt-repository ppa:bitcoin/bitcoin
+$sudo apt-get update
+$sudo apt-get install libdb4.8-dev libdb4.8++-dev
+$sudo apt-get install libminiupnpc-dev
+$sudo apt-get install libzmq3-dev
+```
 
 Compiling:
 
-sudo ./autogen.sh <br />
-./configure --enable-cxx --disable-tests --enable-reduce-exports --disable-bench --disable-shared --with-pic --prefix=$BDB_PREFIX CXXFLAGS="-fPIC" CPPFLAGS="-fPIC" <br />
-make <br />
+```
+$sudo ./autogen.sh
+$./configure --enable-cxx --disable-tests --enable-reduce-exports --disable-bench --disable-shared --with-pic --prefix=$BDB_PREFIX CXXFLAGS="-fPIC" CPPFLAGS="-fPIC"
+$make
+```
 
 Helpful Commands
 ----------------
 (start ravend) <br />
-ravend -daemon <br />
-
+```
+$ravend -daemon
+```
 (stop ravend) <br />
-raven-cli stop <br />
-
+```
+$raven-cli stop <br />
+```
 Sample raven.conf
 ----------------
-
-(server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands) <br />
+```
+#server=1 tells Bitcoin-Qt and bitcoind to accept JSON-RPC commands
 server=1 <br />
 
-(Set rpcuser and rpcpassword to your own values for security) <br />
-rpcuser=a-unique-username <br />
-rpcpassword=a-unique-password <br />
+#Set rpcuser and rpcpassword to your own values for security
+rpcuser=a-unique-username
+rpcpassword=a-unique-password
 
-(allow connections from localhost) <br />
-rpcallowip=127.0.0.1 <br />
-whitelist=127.0.0.1 <br />
+#(allow connections from localhost
+rpcallowip=127.0.0.1
+whitelist=127.0.0.1
 
-(Listen for RPC connections on this TCP port:) <br />
+#(Listen for RPC connections on this TCP port:
 rpcport=8766 <br />
 
-(Miscellaneous options) <br />
+#(Miscellaneous options)
 
-txindex=1 <br />
-addressindex=1 <br />
-spentindex=1 <br />
-timestampindex=1 <br />
+txindex=1
+addressindex=1
+spentindex=1
+timestampindex=1
 
-mempoolexpiry=72 # Default 336 <br />
-rpcworkqueue=1100 <br />
-maxmempool=2000 <br />
-dbcache=1000 <br />
-maxtxfee=1.0 <br />
-uacomment=bitcore-sl <br />
-zmqpubrawtx=tcp://127.0.0.1:28332 <br />
-zmqpubhashblock=tcp://127.0.0.1:28332 <br />
-dbmaxfilesize=64 <br />
-
+mempoolexpiry=72 # Default 336
+rpcworkqueue=1100
+maxmempool=2000
+dbcache=1000
+maxtxfee=1.0
+uacomment=bitcore-sl
+zmqpubrawtx=tcp://127.0.0.1:28332
+zmqpubhashblock=tcp://127.0.0.1:28332
+dbmaxfilesize=64
+```
 
 Raven Core integration/staging tree
 =====================================

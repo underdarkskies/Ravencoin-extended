@@ -78,6 +78,26 @@ zmqpubrawtx=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
 dbmaxfilesize=64
 ```
+Packaging Ravencoin for Ravencore:
+----------------
+```
+$sudo ./autogen.sh
+$./configure --enable-cxx --disable-tests --enable-reduce-exports --disable-bench --with-pic --prefix=$BDB_PREFIX CXXFLAGS="-fPIC" CPPFLAGS="-fPIC"
+$make
+$mkdir ~/package && mkdir ~/package/ravencoin-0.15.0
+$sudo make install DESTDIR=~/package/ravencoin-0.15.0
+$cd ~/package/
+$sudo find . -name "lib*.la" -delete
+$sudo find . -name "lib*.a" -delete
+$sudo rm -rf ravencoin-0.15.0/lib/pkgconfig
+$find ravencoin-0.15.0/ -not -name "*.dbg" | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ~/ravencoin-0.15.0-linux64.tar.gz
+$cd 
+$sha256sum ravencoin-0.15.0-linux64.tar.gz > SHA256SUMS
+$gpg --digest-algo sha256 --clearsign SHA256SUMS # outputs SHA256SUMS.asc
+##(enter password for gpg key)##
+$rm SHA256SUMS
+````
+upload SHA256SUMS.asc and .tar.gz to github release page 
 
 Raven Core integration/staging tree
 =====================================

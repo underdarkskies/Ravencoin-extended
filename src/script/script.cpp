@@ -243,7 +243,9 @@ bool CScript::IsWitnessProgram(int& version, std::vector<unsigned char>& program
         version = DecodeOP_N((opcodetype)(*this)[0]);
         program = std::vector<unsigned char>(this->begin() + 2, this->end());
         return true;
-
+    }
+    return false;
+}
 bool CScript::IsPayToPublicKey() const
 {
     // Test for pay-to-pubkey CScript with both

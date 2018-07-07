@@ -64,7 +64,7 @@ class WalletTest(RavenTestFramework):
         assert_equal(txout['value'], 5000)
         txout = self.nodes[0].gettxout(txid=confirmed_txid, n=confirmed_index, include_mempool=True)
         assert_equal(txout['value'], 5000)
-
+        
         # Send 21 RVN from 0 to 2 using sendtoaddress call.
         # Locked memory should use at least 32 bytes to sign each transaction
         self.log.info("test getmemoryinfo")

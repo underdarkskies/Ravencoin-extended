@@ -8,8 +8,6 @@
 
 #include <string>
 
-#include <string>
-
 class CRPCTable;
 class CWallet;
 class JSONRPCRequest;

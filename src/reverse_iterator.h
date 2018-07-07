@@ -15,7 +15,7 @@ template <typename T>
 class reverse_range
 {
     T &m_x;
-
+    
 public:
     explicit reverse_range(T &x) : m_x(x) {}
 

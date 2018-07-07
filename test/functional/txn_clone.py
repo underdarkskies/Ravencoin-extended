@@ -130,7 +130,7 @@ class TxnMallTest(RavenTestFramework):
         # Check node0's total balance; should be same as before the clone, + 100 RVN for 2 matured,
         # less possible orphaned matured subsidy
         expected += 10000
-        if (self.options.mine_block):
+        if (self.options.mine_block): 
             expected -= 5000
         assert_equal(self.nodes[0].getbalance(), expected)
         assert_equal(self.nodes[0].getbalance("*", 0), expected)

@@ -109,5 +109,8 @@ class WalletDumpTest(RavenTestFramework):
         # Overwriting should fail
         assert_raises_rpc_error(-8, "already exists", self.nodes[0].dumpwallet, tmpdir + "/node0/wallet.unencrypted.dump")
 
+        # Overwriting should fail
+        assert_raises_rpc_error(-8, "already exists", self.nodes[0].dumpwallet, tmpdir + "/node0/wallet.unencrypted.dump")
+
 if __name__ == '__main__':
     WalletDumpTest().main ()

@@ -445,14 +445,6 @@
         <source>Processing blocks on disk...</source>
         <translation>Обробка блоків на диску...</translation>
     </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Індексація блоків на диску ...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Обробка блоків на диску...</translation>
-    </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation><numerusform>Оброблено %n блок історії транзакцій.</numerusform><numerusform>Оброблено %n блоки історії транзакцій.</numerusform><numerusform>Оброблено %n блоків історії транзакцій.</numerusform></translation>

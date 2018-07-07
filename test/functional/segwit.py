@@ -109,7 +109,7 @@ class SegWitTest(RavenTestFramework):
 
     def run_test(self):
         self.nodes[0].generate(161) #block 161
-
+ 
 #         self.log.info("Verify sigops are counted in GBT with pre-BIP141 rules before the fork")
 #         txid = self.nodes[0].sendtoaddress(self.nodes[0].getnewaddress(), 1)
 #         tmpl = self.nodes[0].getblocktemplate({})

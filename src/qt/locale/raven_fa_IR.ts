@@ -528,26 +528,6 @@
         <source>Recent transactions</source>
         <translation>تراکنش های اخیر</translation>
     </message>
-    <message>
-        <source>Available:</source>
-        <translation>در دسترس:</translation>
-    </message>
-    <message>
-        <source>Pending:</source>
-        <translation>در حال انتظار:</translation>
-    </message>
-    <message>
-        <source>Total:</source>
-        <translation>کل:</translation>
-    </message>
-    <message>
-        <source>Spendable:</source>
-        <translation>قابل مصرف:</translation>
-    </message>
-    <message>
-        <source>Recent transactions</source>
-        <translation>تراکنش های اخیر</translation>
-    </message>
     </context>
 <context>
     <name>PaymentServer</name>

@@ -8,8 +8,6 @@
 
 #include "amount.h"
 
-#include "amount.h"
-
 #include <string>
 #include <vector>
 

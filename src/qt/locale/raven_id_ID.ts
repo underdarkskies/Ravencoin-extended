@@ -441,14 +441,6 @@
         <source>Processing blocks on disk...</source>
         <translation>Memproses blok pada disk ...</translation>
     </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Pengindeksan blok pada disk ...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Memproses blok pada disk ...</translation>
-    </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation><numerusform>%n blok dari riwayat transaksi diproses.</numerusform></translation>

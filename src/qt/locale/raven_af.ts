@@ -234,10 +234,6 @@
         <translation>Teken &amp;boodskap...</translation>
     </message>
     <message>
-        <source>Sign &amp;message...</source>
-        <translation>Teken &amp;boodskap...</translation>
-    </message>
-    <message>
         <source>Synchronizing with network...</source>
         <translation>Netwerk-sinkronisasie...</translation>
     </message>

@@ -117,7 +117,7 @@ public:
         return block;
     }
 
-    // void SetPrevBlockHash(uint256 prevHash)
+    // void SetPrevBlockHash(uint256 prevHash) 
     // {
     //     block.hashPrevBlock = prevHash;
     // }

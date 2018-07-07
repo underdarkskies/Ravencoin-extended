@@ -2951,10 +2951,6 @@
         <translation>Os programadores de %s</translation>
     </message>
     <message>
-        <source>The %s developers</source>
-        <translation>Os programadores de %s</translation>
-    </message>
-    <message>
         <source>A fee rate (in %s/kB) that will be used when fee estimation has insufficient data (default: %s)</source>
         <translation>Uma percentagem da taxa (em %s/kB) que será utilizada quando a estimativa da taxa tiver dados insuficientes (predefinição: %s)</translation>
     </message>

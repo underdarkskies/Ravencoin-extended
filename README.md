@@ -1,4 +1,5 @@
-This has been a comprehensive project for me. If you appreciate the work done <br />
+:warning: OBSOLETE. DO NOT USE!  
+If you appreciate the work done <br />
 please consider donating(RVN) to: RD7yadeCvSDs4fCbEPuHstU3GHbiS7ao9q <br />
 
 Ravencoin - an extended RPC version of Ravencoin  
